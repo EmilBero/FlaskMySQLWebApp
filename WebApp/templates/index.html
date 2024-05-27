@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSCI 3461: Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #007bff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 150px; /* Adjust the image size as needed */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>MUC Web App</h1>
+    </div>
+    <ul>
+        <li>
+            <a href="/show-table">
+                <img src="{{ url_for('static', filename='info.png') }}" alt="Show Tables">
+                <div class="image-description">View Tables</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="/add-supplier">
+                <img src="{{ url_for('static', filename='sign-add-icon.png') }}" alt="Add Supplier">
+                <div class="image-description">Add Supplier</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="/get-expenses">
+                <img src="{{ url_for('static', filename='tech-money.png') }}" alt="Annual Expenses">
+                <div class="image-description">Annual Expenses</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="/budget-projection">
+                <img src="{{ url_for('static', filename='increase.jpg') }}" alt="Budget Projection">
+                <div class="image-description">Budget Projection</div>
+            </a>
+        </li>
+    </ul>
+
+</body>
+
+</html>
+
